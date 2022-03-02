@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Raya admin panel with CSS</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <link rel="stylesheet" href="styles/styles.css" />
+      </head>
+      <body>
+            <div class="container">
+                  <!-- start Navbar -->
+                  <div class="navbar">
+                        <ul class="navbar-right">
+                              <li><i class="far fa-user-circle"></i></li>
+                              <li><i id="openSidebar" class="fas fa-bars"></i></li>
+                        </ul>
+                        <form action class="navbar-search">
+                              <span class="fa fa-search"></span>
+                              <input type="search" name="searchBox" placeholder="جستجو کن...!" />
+                        </form>
+                        <ul class="navbar-left">
+                              <li><i class="far fa-envelope"></i></li>
+                              <li><i class="far fa-bell"></i></li>
+                              <li><i class="far fa-user-circle"></i></li>
+                        </ul>
+                  </div>
+                  <!-- end Navbar -->
+                  <!-- start Sidebar -->
+                  <div id="sidebarNav">
+                        <ul>
+                              <li class="active"><i class="fas fa-box-open"></i></li>
+                              <li><i class="fas fa-plus"></i></li>
+                              <li><i class="fas fa-download"></i></li>
+                              <li><i class="far fa-edit"></i></li>
+                              <li><i class="far fa-hdd"></i></li>
+                              <li><i class="far fa-file"></i></li>
+                              <li><i class="fas fa-headset"></i></li>
+                              <li><i class="far fa-star"></i></li>
+                              <li><i class="fas fa-cog"></i></li>
+                        </ul>
+                  </div>
+            </div>
+            <!-- end Sidebar -->
+            <!-- start container box => 4 -->
+            <div id="wrapper">
+                  <div class="row">
+                        <div class="col-3 col-m-6 col-sm-6">
+                              <div class="box bg-success">
+                                    <div class="texts">
+                                          <p>ثبت دانش جدید</p>
+                                          <p>43545</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-3 col-m-6 col-sm-6">
+                              <div class="box bg-blue">
+                                    <div class="texts">
+                                          <p>دریافتی</p>
+                                          <p>4006</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-3 col-m-6 col-sm-6">
+                              <div class="box bg-orange">
+                                    <div class="texts">
+                                          <p>در جریان</p>
+                                          <p>61344</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-3 col-m-6 col-sm-6">
+                              <div class="box bg-warning">
+                                    <div class="texts">
+                                          <p>آرشیو</p>
+                                          <p>34040</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- end container box => 4 -->
+                  <!-- start table content -->
+                  <div class="col-12 col-m-12 col-sm-12">
+                        <div class="table bg-white">
+                              <div class="table-header">
+                                    <h2>لیست دانش ها</h2>
+                              </div>
+                              <div class="table-content">
+                                    <table>
+                                          <thead>
+                                                <tr>
+                                                      <th>#ردیف</th>
+                                                      <th>موضوع</th>
+                                                      <th>پیوست</th>
+                                                      <th>تاریح ثبت</th>
+                                                      <th>وضعیت</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                <tr>
+                                                      <td>1</td>
+                                                      <td>دانش شماره یک</td>
+                                                      <td>دارد</td>
+                                                      <td>2021/04/25</td>
+                                                      <td>در حال بررسی</td>
+                                                </tr>
+                                                <tr>
+                                                      <td>2</td>
+                                                      <td>دانش شماره دو</td>
+                                                      <td>دارد</td>
+                                                      <td>2021/04/23</td>
+                                                      <td>در حال بررسی</td>
+                                                </tr>
+                                                <tr>
+                                                      <td>3</td>
+                                                      <td>دانش شماره سه</td>
+                                                      <td>دارد</td>
+                                                      <td>2021/04/21</td>
+                                                      <td>در حال بررسی</td>
+                                                </tr>
+                                          </tbody>
+                                    </table>
+                                    <!-- end table content -->
+                              </div>
+                        </div>
+                  </div>
+                  <div id="settingBtn">
+                        <i class="fas fa-cog"></i>
+                  </div>
+                  <footer class="col-12 col-m-12 col-sm-12">
+                        <div class="copyright-area">
+                              <hr />
+                              <h5>Copyright &copy; 2021</h5>
+                        </div>
+                  </footer>
+            </div>
+      </body>
+</html>
+<script src="script/index.js"></script>
