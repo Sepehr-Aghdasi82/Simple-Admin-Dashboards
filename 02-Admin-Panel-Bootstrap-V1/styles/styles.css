@@ -1,0 +1,286 @@
+:root {
+      --theme-color: #4834d4;
+}
+.theme-color {
+      background: var(--theme-color);
+}
+* {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      list-style-type: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-family: "iransans";
+}
+@font-face {
+      font-family: "iransans";
+      src: url("../assets/fonts/A-Iranian-Sans/IRANSANSMONOSPACEDNUM.TTF");
+}
+body {
+      background-color: #f4f7fe !important;
+}
+/* Start Menu styles */
+.topMenu {
+      background-color: #ffffff;
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      z-index: 2;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.topMenu-search {
+      position: relative;
+      margin: auto;
+      width: 50%;
+}
+.topMenu ul {
+      display: flex;
+      justify-content: center;
+      font-size: 17px;
+      margin-right: 10px;
+}
+.topMenu ul li {
+      margin-top: 15px;
+}
+.topMenu-right i:nth-child(1) {
+      margin: 0 10px;
+}
+.topMenu ul li {
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+}
+/* menu icons */
+.topMenu ul li i {
+      color: #aaa;
+      font-size: 25px;
+      cursor: pointer;
+}
+.topMenu ul li i:hover {
+      transition: 0.3s;
+      color: rgb(119, 119, 119);
+}
+.topMenu-search input[type="search"] {
+      margin: auto;
+      width: 100%;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      padding: 10px 30px 10px 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.topMenu-search input[type="search"]::placeholder {
+      font-size: 15px;
+      padding: 0px 13px;
+}
+/* search box icon */
+.topMenu-search span {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      z-index: 1;
+      display: block;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+      font-size: 20px;
+      padding: 18px 0px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: rgb(119, 119, 119);
+}
+/* End menu styles */
+/* Start Sidebar styles */
+#sidebarNav {
+      width: 70px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      margin-top: 70px;
+      height: 100%;
+      transition: 0.5s ease-in-out;
+      overflow-x: hidden;
+      text-align: center;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#sidebarNav ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+}
+.hide {
+      width: 0 !important;
+}
+#sidebarNav .active i {
+      color: #fff;
+}
+#sidebarNav ul li {
+      width: 70px;
+      padding: 25px 0px 25px 0px;
+      transition: 0.3s;
+}
+#sidebarNav ul li i {
+      color: #aaa;
+      font-size: 20px;
+}
+#sidebarNav ul li:hover {
+      color: rgb(99, 99, 99);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+}
+#sidebarNav ul li:hover i {
+      color: rgb(99, 99, 99);
+      transition: 0.3s ease-in-out;
+}
+/* Sidebar Scroll */
+#sidebarNav::-webkit-scrollbar {
+      width: 4px;
+}
+#sidebarNav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 50%;
+}
+#sidebarNav::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 50px;
+}
+#sidebarNav::-webkit-scrollbar-thumb:hover {
+      background: #555;
+}
+#wrapper {
+      padding: 75px 20px;
+      margin-right: 82px;
+      transition: margin-right 0.5s;
+}
+.wrapper-expand {
+      margin-right: 0px !important;
+      transition: margin-right 0.5s;
+}
+.row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+}
+.row div {
+      margin: 8px 0;
+}
+.box {
+      display: flex;
+      flex-direction: row;
+      height: 100px;
+      padding: 5px 20px 0 0;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      font-size: 22px;
+}
+.texts {
+      width: 100%;
+      display: flex;
+      font-size: 0.9em;
+}
+.texts p {
+      display: flex;
+}
+.texts p:nth-child(2) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 22px;
+      width: 100%;
+}
+.table-area {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 7px;
+}
+.table {
+      border-radius: 10px;
+}
+.table-header {
+      padding: 10px;
+}
+.table-content {
+      padding: 5px 20px;
+      overflow-y: hidden;
+}
+.table-content table {
+      border-collapse: collapse;
+      width: 100%;
+}
+.table-content table th {
+      text-align: right;
+      padding: 15px 10px;
+      font-weight: bold;
+      font-size: 18px;
+}
+.table-content table th:nth-child(1) {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+}
+.table-content table th:nth-child(5) {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+}
+.table-content table td {
+      padding: 15px;
+}
+.copyright-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-top: 7em;
+}
+#settingBtn {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 30px;
+      left: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
+/* Extra small devices <= 600px */
+@media only screen and (max-width: 375px) {
+      .topMenu-search {
+            display: none;
+      }
+      .topMenu ul {
+            margin-right: 0;
+      }
+      .topMenu-right {
+            padding: 0 0 0 40px;
+      }
+      .topMenu-right li:nth-child(2) {
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+      }
+      [class*="col-"] {
+            width: 100%;
+      }
+}
+/* Extra small devices <= 600px */
+@media only screen and (max-width: 600px) {
+      .topMenu-search {
+            visibility: hidden;
+      }
+      .row div {
+            margin: 10px 0;
+      }
+      
+}
