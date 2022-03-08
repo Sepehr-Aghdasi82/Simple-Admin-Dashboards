@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fa">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>RTL Admin Panel</title>
+            <link rel="stylesheet" href="assets/styles/style.css" />
+            <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+             />
+            <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            />
+      </head>
+      <body translate="no" class="bg-container">
+            <!-- Navbar -->
+            <div class="container-fluid">
+                  <nav
+                        class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+                        id="navbar"
+                  >
+                        <div class="navbar-box nav-link col-lg-1 col-12 d-flex justify-content-end">
+                              <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent"
+                                    aria-controls="navbarSupportedContent"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                              >
+                                    <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <i
+                                    id="openAndCloseSidebar"
+                                    class="fas fa-times bg-info text-white mx-lg-4 mx-2"
+                              ></i>
+                        </div>
+                        <div class="collapse navbar-collapse col-9" id="navbarSupportedContent">
+                              <div class="col-12 col-lg-6 d-flex justify-content-center">
+                                    <div class="d-flex flex-row py-lg-0 py-md-3 align-items-center">
+                                          <span
+                                                class="input-group-text text-muted h-100"
+                                                id="basic-addon1"
+                                                ><i class="fas fa-search"></i
+                                          ></span>
+                                          <input
+                                                type="search"
+                                                class="form-control h-100 px-5"
+                                                placeholder="کلمه کلیدی را وارد کنید...."
+                                          />
+                                    </div>
+                              </div>
+                              <div
+                                    class="
+                                          col-12 col-lg-6
+                                          px-3
+                                          d-flex
+                                          justify-content-lg-end justify-content-center
+                                    "
+                              >
+                                    <ul class="navbar-nav d-flex align-items-center">
+                                          <!-- ! language Dropdown -->
+                                          <li class="col-lg-3 col-12 nav-item dropdown">
+                                                <a
+                                                      class="nav-link dropdown-toggle"
+                                                      href="#"
+                                                      id="navbarDropdown"
+                                                      role="button"
+                                                      data-bs-toggle="dropdown"
+                                                      aria-expanded="false"
+                                                >
+                                                      FA
+                                                </a>
+                                                <ul
+                                                      class="dropdown-menu"
+                                                      aria-labelledby="navbarDropdown"
+                                                >
+                                                      <li>
+                                                            <a class="dropdown-item" href="#">EN</a>
+                                                      </li>
+                                                      <li>
+                                                            <hr class="dropdown-divider" />
+                                                      </li>
+
+                                                      <li>
+                                                            <a class="dropdown-item" href="#"
+                                                                  >Germany</a
+                                                            >
+                                                      </li>
+                                                      <li>
+                                                            <hr class="dropdown-divider" />
+                                                      </li>
+                                                      <li>
+                                                            <a class="dropdown-item" href="#"
+                                                                  >French</a
+                                                            >
+                                                      </li>
+                                                </ul>
+                                                <!-- ! END language Dropdown -->
+                                          </li>
+                                          <div class="col-lg-3 col-12 navbar-box nav-link">
+                                                <i class="far fa-sun"></i>
+                                          </div>
+                                          <div class="col-lg-3 col-12 navbar-box nav-link">
+                                                <i class="far fa-bell"></i>
+                                          </div>
+                                          <div class="col-lg-3 col-12 navbar-box nav-link">
+                                                <i class="far fa-user"></i>
+                                          </div>
+                                    </ul>
+                              </div>
+                        </div>
+                  </nav>
+            </div>
+            <!-- End navbar -->
+
+            <!-- Sidebar -->
+            <div class="d-flex flex-row">
+                  <div
+                        class="sidebar bg-theme d-flex flex-column flex-shrink-0 p-3 text-white"
+                        id="sidebar"
+                  >
+                        <a
+                              href="#"
+                              class="
+                                    col-12
+                                    d-flex
+                                    flex-lg-row flex-column
+                                    align-items-center
+                                    text-white text-decoration-none
+                              "
+                        >
+                              <div
+                                    class="
+                                          logo-logo
+                                          col-12 col-lg-3
+                                          d-flex
+                                          justify-content-lg-start justify-content-center
+                                    "
+                              >
+                                    <img
+                                          src="assets/images/business-report.png"
+                                          alt="business-report-image"
+                                          style="max-width: 50px; max-height: 50px"
+                                    />
+                              </div>
+                              <div
+                                    class="
+                                          logo-text
+                                          col-12 col-lg-9
+                                          d-flex
+                                          flex-column
+                                          justify-content-lg-start justify-content-center
+                                    "
+                              >
+                                    <span class="fs-5 text-lg-end text-center p-lg-0 pt-3"
+                                          >بوت استرپ</span
+                                    >
+                                    <span
+                                          class="
+                                                fs-6
+                                                sidebar-text-color
+                                                text-lg-end text-center
+                                                p-lg-0
+                                          "
+                                          >سایدبار</span
+                                    >
+                              </div>
+                        </a>
+                        <ul class="nav nav-pills flex-column mb-auto mt-2">
+                              <hr />
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-home"></i>
+                                          <span class="col-11"> داشبورد</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-align-right"></i>
+                                          <span class="col-11">پست ها</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 far fa-folder"></i>
+                                          <span class="col-11"> دسته بندی</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 far fa-image"></i>
+                                          <span class="col-11">عکس ها</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-pager"></i>
+                                          <span class="col-11">صفحه ها</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 far fa-envelope"></i>
+                                          <span class="col-11"> نظرات</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item px-2">
+                                    <p class="text-muted">سیستم</p>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-pencil-alt"></i>
+                                          <span class="col-11"> ظاهر</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-th-large"></i>
+                                          <span class="col-11"> افزونه ها</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                sidebar-text-color
+                                                active
+                                                justify-content-lg-start justify-content-center
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-users"></i>
+                                          <span class="col-11"> کاربران</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                                    <a
+                                          href="#"
+                                          class="
+                                                nav nav-link
+                                                d-flex
+                                                justify-content-lg-start justify-content-center
+                                                sidebar-text-color
+                                          "
+                                    >
+                                          <i class="col-1 fs-4 fas fa-cog"></i>
+                                          <span class="col-11"> تنظیمات</span>
+                                    </a>
+                              </li>
+                              <hr />
+                              <div class="user-box d-flex flex-row">
+                                    <a
+                                          href="#"
+                                          class="
+                                                d-flex
+                                                flex-lg-row flex-column
+                                                align-items-center
+                                                text-white text-decoration-none
+                                          "
+                                    >
+                                          <img
+                                                src="assets/images/undraw_profile_pic_ic-5-t.svg "
+                                                alt=""
+                                          />
+                                          <span class="fs-6 px-2">Sepehr</span>
+                                    </a>
+                              </div>
+                        </ul>
+                  </div>
+                  <!-- End sidebar -->
+
+                  <!-- Main -->
+                  <!-- 4 box in every row -->
+                  <div id="container" class="container">
+                        <h3 class="liner">تمام کارمندان</h3>
+                        <div class="row">
+                              <!-- 4 box in every row -->
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_male_avatar_323b.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_female_avatar_w3jk-2.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_male_avatar_323b.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_female_avatar_w3jk-2.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_female_avatar_w3jk-2.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_male_avatar_323b.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_female_avatar_w3jk-2.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-xs-6 col-md-6 col-lg-3 p-3">
+                                    <div
+                                          class="
+                                                card
+                                                d-flex
+                                                flex-column
+                                                text-center
+                                                bg-white
+                                                shadow-sm
+                                          "
+                                    >
+                                          <div
+                                                class="
+                                                      card-header
+                                                      d-flex
+                                                      justify-content-end
+                                                      align-items-center
+                                                      bg-white
+                                                      text-muted
+                                                      border-0
+                                                "
+                                          >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                          </div>
+                                          <div class="card-body">
+                                                <img
+                                                      src="assets/images/undraw_male_avatar_323b.svg"
+                                                      class="w-50 rounded-circle p-3"
+                                                      alt=""
+                                                />
+                                                <h5 class="card-title fw-bold">Sepehr Aghdasi</h5>
+                                                <small class="card-text text-muted py-3"
+                                                      >برنامه نویس</small
+                                                >
+                                                <br />
+                                                <small class="card-text text-muted"
+                                                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                                      از صنعت</small
+                                                >
+                                          </div>
+                                          <div
+                                                class="
+                                                      card-footer
+                                                      bg-white
+                                                      d-flex
+                                                      justify-content-center
+                                                      align-items-center
+                                                      fw-bold
+                                                "
+                                          >
+                                                <i class="far fa-comment px-1"></i>
+                                                پیام بفرستید
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- navigation -->
+                              <nav aria-label="col-12 Page navigation example ">
+                                    <ul class="pagination justify-content-end px-2 my-2">
+                                          <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                      <span aria-hidden="true"
+                                                            ><i class="fas fa-arrow-right"></i
+                                                      ></span>
+                                                </a>
+                                          </li>
+                                          <li class="page-item">
+                                                <a class="page-link" href="#">3</a>
+                                          </li>
+                                          <li class="page-item">
+                                                <a class="page-link" href="#">2</a>
+                                          </li>
+                                          <li class="page-item active">
+                                                <a class="page-link" href="#">1</a>
+                                          </li>
+                                          <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                      <span aria-hidden="true"
+                                                            ><i class="fas fa-arrow-left"></i
+                                                      ></span>
+                                                </a>
+                                          </li>
+                                    </ul>
+                              </nav>
+                              <!-- End navigation -->
+
+                              <!-- Footer -->
+                              <hr />
+                              <nav class="col-12 navbar navbar-expand-lg navbar-light d-flex">
+                                    <div class="col-12 col-lg-6">
+                                          <span
+                                                class="
+                                                      navbar-brand
+                                                      d-flex
+                                                      flex-row
+                                                      justify-content-lg-start
+                                                      justify-content-center
+                                                      text-muted
+                                                "
+                                                ><ol class="d-flex flex-row">
+                                                      <a
+                                                            href="javascript: void(0)"
+                                                            class="
+                                                                  text-decoration-none text-black-50
+                                                            "
+                                                            ><li class="fs-6 px-3 fw-bold">
+                                                                  درباره ما
+                                                            </li></a
+                                                      >
+                                                      <a
+                                                            href="javascript: void(0)"
+                                                            class="
+                                                                  text-decoration-none text-black-50
+                                                            "
+                                                            ><li class="fs-6 px-3 fw-bold">
+                                                                  تماس با ما
+                                                            </li></a
+                                                      >
+                                                      <a
+                                                            href="javascript: void(0)"
+                                                            class="
+                                                                  text-decoration-none text-black-50
+                                                            "
+                                                            ><li class="fs-6 px-3 fw-bold">
+                                                                  پشتیبانی
+                                                            </li></a
+                                                      >
+                                                </ol>
+                                          </span>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                          <span
+                                                class="
+                                                      navbar-brand
+                                                      d-flex
+                                                      justify-content-lg-end justify-content-center
+                                                      text-muted
+                                                      fs-6
+                                                "
+                                                ><ul>
+                                                      <li class="fs-6">
+                                                            copyright 2021 &copy; - Sepehr Aghdasi
+                                                      </li>
+                                                </ul>
+                                          </span>
+                                    </div>
+                              </nav>
+                              <!-- End footer -->
+                        </div>
+                  </div>
+            </div>
+            <!--End main -->
+      </body>
+</html>
+<script src="assets/script/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
